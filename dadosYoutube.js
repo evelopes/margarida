@@ -1,9 +1,9 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const url = "https://www.youtube.com/c/quemplantacolhe/search?query=";
+const valor = "lichia";
 
-
-(async function dados() => {
+(async function dados() {
     const navegador = await puppeteer.launch({ headless: false });
     const pagina = await navegador.newPage();
 
@@ -24,9 +24,7 @@ const url = "https://www.youtube.com/c/quemplantacolhe/search?query=";
 
         console.log('terminou')
     })
-  await navegador.close();
- 
+    await navegador.close();
+
 })();
 
-
-export dados;
